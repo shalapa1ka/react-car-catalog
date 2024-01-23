@@ -10,3 +10,16 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+.btn {
+    display: block;
+    padding: 6px 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: aquamarine;
+}
+
