@@ -1,22 +1,17 @@
-import styles from './Home.module.css'
+import CarItem from "./car-item/CarItem";
+import { cars } from "./car.data";
 
 const Home = () => {
   return (
     <div>
-        <h1>Home</h1>
-        <div className={styles.item}>
-            <div className={styles.image} style={{
-                backgroundImage: 'url(/car-1.jpg)',
-            }} />
-            <div className={styles.info}>
-                <h2>Car 1</h2>
-                <p>$ 100 000</p>
-                <button>Read more</button>
-            </div>
-        </div>
+      <h1>Home</h1>
+      <div>
+        {cars.length
+          ? cars.map((car) => <CarItem key={car.id} car={car} />)
+          : "No cars"}
+      </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
